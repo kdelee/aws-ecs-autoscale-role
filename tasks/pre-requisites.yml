@@ -17,3 +17,11 @@
 - name: "AWS | ECS | Check VPC subnets have been defined"
   fail: msg="You must specify a list of existing VPC subnets for which to provision the EC2 nodes into"
   when: ec2_asg_vpc_subnets is undefined and ecs_state == "present"
+
+- name: "AWS | EC2 | Check launch configuration name has been defined"
+  fail: msg="You must specify the name of the launch configuration cluster, e.g. my-lc"
+  when: ec2_launch_configuration_name is undefined
+
+- name: "AWS | EC2 | Check EC2 Auto-Scaling Group name has been defined"
+  fail: msg="You must specify the name of the launch configuration cluster, e.g. my-lc"
+  when: ec2_asg_name is undefined
