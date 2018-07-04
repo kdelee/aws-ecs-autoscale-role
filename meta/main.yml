@@ -7,9 +7,10 @@ galaxy_info:
   platforms: []
 
   galaxy_tags:
-    - AWS
-    - EC2
-    - ECS
-    - Auto-scaling Group
+    - aws
+    - ec2
+    - ecs
+    - autoscaling
+    - cluster
 
 dependencies: []
