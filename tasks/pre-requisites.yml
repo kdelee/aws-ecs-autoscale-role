@@ -29,6 +29,7 @@
 - name: "AWS | IAM | Check that default role for ECS is in place if none specified"
   iam_role:
     name: "{{ ecs_instance_profile_name }}"
+    state: "present"
     assume_role_policy_document:
       Version: '2012-10-17'
       Statement:
